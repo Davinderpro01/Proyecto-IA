@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Detección de rostros en tiempo real</title>
+    <style>
+        body {
+            background-color: #f5f5f5;
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            text-align: center;
+            color: #ffffff;
+            margin-top: 50px;
+            font-size: 48px;
+        }
+        #video-container {
+            width: 640px;
+            height: 480px;
+            margin: 0 auto;
+            margin-top: 50px;
+            box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            position: relative;
+        }
+        #video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            height: auto;
+        }
+        #loading-icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div style="background-image: linear-gradient(#2a664c, #29b4aa); height: 100vh;">
+        <h1>Detección de rostros en tiempo real</h1>
+        <div id="video-container">
+            <img id="video" src="{{ url_for('video_feed') }}">
+        </div>
+    </div>
+</body>
+</html>
